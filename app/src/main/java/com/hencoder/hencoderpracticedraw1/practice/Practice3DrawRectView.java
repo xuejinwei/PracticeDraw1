@@ -9,7 +9,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Practice3DrawRectView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice3DrawRectView(Context context) {
         super(context);
@@ -35,6 +34,7 @@ public class Practice3DrawRectView extends View {
         mRadius = mWidth < mHeight ? mWidth / 2 : mHeight / 2;//半径为宽高最小值的1/2
         mRadius = mRadius / 5 * 4;// 再取4/5
 
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setAntiAlias(true);// 开启抗锯齿，或者 Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);也可以开启
         paint.setColor(Color.BLACK);
 

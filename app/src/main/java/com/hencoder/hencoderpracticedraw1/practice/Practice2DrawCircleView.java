@@ -11,7 +11,6 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw1.utils.DensityUtil;
 
 public class Practice2DrawCircleView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice2DrawCircleView(Context context) {
         super(context);
@@ -37,6 +36,7 @@ public class Practice2DrawCircleView extends View {
         mRadius = mWidth < mHeight ? mWidth / 4 : mHeight / 4;//半径为宽高最小值的1/4
         mRadius = mRadius / 5 * 4;// 再取4/5
 
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setAntiAlias(true);// 开启抗锯齿，或者 Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);也可以开启
         paint.setColor(Color.BLACK);
 

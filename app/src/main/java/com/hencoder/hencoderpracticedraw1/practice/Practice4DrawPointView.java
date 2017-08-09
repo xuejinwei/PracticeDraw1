@@ -11,7 +11,6 @@ import android.view.View;
 import com.hencoder.hencoderpracticedraw1.utils.DensityUtil;
 
 public class Practice4DrawPointView extends View {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public Practice4DrawPointView(Context context) {
         super(context);
@@ -33,6 +32,7 @@ public class Practice4DrawPointView extends View {
 //        一个圆点，一个方点
 //        圆点和方点的切换使用 paint.setStrokeCap(cap)：`ROUND` 是圆点，`BUTT` 或 `SQUARE` 是方点
 
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.BLACK);
         paint.setStrokeWidth(DensityUtil.dp2px(30));
         paint.setStrokeCap(Paint.Cap.ROUND);
